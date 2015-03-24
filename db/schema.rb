@@ -17,17 +17,18 @@ ActiveRecord::Schema.define(version: 20150323181949) do
   enable_extension "plpgsql"
 
   create_table "dogs", force: :cascade do |t|
-    t.string  "name"
-    t.text    "bio"
+    t.string  "name",       null: false
+    t.integer "age",        null: false
     t.string  "avatar_url"
-    t.integer "owner_id",   null: false
+    t.integer "owner_id"
   end
 
   add_index "dogs", ["owner_id"], name: "index_dogs_on_owner_id", using: :btree
 
   create_table "owners", force: :cascade do |t|
-    t.string "name", null: false
-    t.text   "bio"
+    t.string  "name",  null: false
+    t.integer "age"
+    t.string  "email"
   end
 
 end

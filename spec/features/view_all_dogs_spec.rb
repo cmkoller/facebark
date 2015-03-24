@@ -7,14 +7,13 @@ feature "View all Dogs", %q(
 ) do
 
   scenario "user views all dogs" do
-    owner = Owner.create(name: "George", bio: "George loves dogs.")
-
+    owner = Owner.create(name: "George", email: "george@gmail.com")
     fido = Dog.create(name: "Fido",
-      bio: "Fido is very friendly and loves to chew bones. He also munches shoelaces.",
+      age: 3,
       avatar_url:  "http://27.media.tumblr.com/tumblr_ls6tpnEwe71r3ip8io1_500.jpg",
       owner: owner)
     buster = Dog.create(name: "Buster",
-      bio: "Buster loves silly hats.",
+      age: 6,
       avatar_url:  "http://placepu.gs/500/350",
       owner: owner)
     visit dogs_path
