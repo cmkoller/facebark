@@ -25,7 +25,7 @@ First, add Factory Girl to your Gemfile:
 ```ruby
 group :development, :test do
   # ... other gems ...
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
 end
 ```
 
