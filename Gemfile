@@ -47,4 +47,5 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end
